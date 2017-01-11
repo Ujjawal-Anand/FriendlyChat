@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">FriendlyChat</string>
+    <string name="image_btn_description">Choose an Image to send</string>
 </resources>

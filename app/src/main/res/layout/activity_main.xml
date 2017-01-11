@@ -9,9 +9,43 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.ujjawal.friendlychat.MainActivity">
-
-    <TextView
-        android:layout_width="wrap_content"
+    
+    <ListView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:id="@+id/message_list_view"
+        android:layout_above="@+id/message_edit_layout"
+        android:transcriptMode="alwaysScroll"
+        android:divider="@android:color/transparent"
+        android:stackFromBottom="true"
+        tools:listitem="@layout/item_message"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/message_edit_layout"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/photo_picker_button"
+            android:src="@mipmap/ic_perm_media_black"
+            android:contentDescription="@string/image_btn_description"/>
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/message_edit_text"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"/>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/message_send_btn"
+            android:src="@mipmap/ic_send_black"/>
+
+    </LinearLayout>
 </RelativeLayout>
